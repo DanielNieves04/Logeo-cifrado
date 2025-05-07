@@ -1,35 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="contenedor">
-        <div class="register">
-            <h1>¿COMO TE LLAMAS?</h1>
-            <form>
+        <div class="formulario-wrapper">
+            <!-- FORM 1: Nombre y Usuario -->
+            <form class="formulario active fade-in" id="form1">
+                <h1>¿Cómo te llamas?</h1>
                 <div class="input-container">
-                    <img src="nombre.svg" alt="Icono nombre">
                     <input type="text" name="nombre" placeholder="Nombre">
-                  </div>
-                
-                  <div class="input-container">
-                    <img src="username.svg" alt="Icono usuario">
+                </div>
+                <div class="input-container">
                     <input type="text" name="username" placeholder="Nombre de usuario">
-                  </div>
-                <input type="submit" class="submit" value="Siguiente">
+                </div>
+                <input type="button" class="submit" value="Siguiente" onclick="mostrarFormulario2()" onclick="registrarNombre()">
+            </form>
+
+            <!-- FORM 2: Registro -->
+            <form class="formulario fade-in" id="form2">
+                <h1>Registro</h1>
+                <div class="input-container">
+                    <input type="email" name="email" placeholder="Correo electrónico">
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" placeholder="Contraseña">
+                </div>
+                <input type="submit" class="submit" value="Registrar">
             </form>
         </div>
 
         <div class="bienvenida">
-            <h1>¡Bienvenido!</h1>
-            <p>Gracias por ver</p>
+            <h1 class="bienvenida-titulo">¡Bienvenido!</h1>
+            <p class="bienvenida-texto">Gracias por ver</p>
         </div>
-
-
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
